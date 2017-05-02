@@ -1,6 +1,6 @@
 
 const assert = require('chai').assert;
-const { time } = require('../lib/time.js');
+const { time, highAndLow } = require('../lib/time.js');
 
 describe('tests', function() {
 
@@ -15,6 +15,10 @@ describe('tests', function() {
     assert.deepEqual(time(86399), '23:59:59')
     assert.deepEqual(time(86400), '24:00:00')
     assert.deepEqual(time(359999), '99:59:59')
+  })
+
+  it('returns the highest and lowest number from a string of numbers as a string', () => {
+    assert.deepEqual(highAndLow('4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'), '542 -214')
   })
 
 });
