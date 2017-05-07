@@ -1,6 +1,6 @@
 
 const assert = require('chai').assert;
-const { time, highAndLow } = require('../lib/time.js');
+const { time, highAndLow, readNumber } = require('../lib/algo.js');
 
 describe('tests', function() {
 
@@ -19,6 +19,11 @@ describe('tests', function() {
 
   it('returns the highest and lowest number from a string of numbers as a string', () => {
     assert.deepEqual(highAndLow('4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'), '542 -214')
+    assert.deepEqual(highAndLow('6500 -72 -87 5609 789 34 -723'), '6500 -723')
+  })
+
+  it('returns the string version of any number', () => {
+    assert.deepEqual(readNumber(4529.37), 'four thousand five hundred twenty-nine point thirty-seven')
   })
 
 });
