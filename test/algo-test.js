@@ -23,7 +23,7 @@ describe('tests', function() {
   })
 
   it('returns the string version of any number', () => {
-    assert.deepEqual(readNumber(4529.37), 'four thousand five hundred twenty-nine point thirty-seven')
+    assert.deepEqual(readNumber(200), 'two-hundred')
     assert.deepEqual(readNumber(2), 'two')
     assert.deepEqual(readNumber(4.652), 'four point six fifty-two')
     assert.deepEqual(readNumber(0.04), 'zero point zero four')
