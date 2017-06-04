@@ -23,10 +23,11 @@ describe('tests', function() {
   })
 
   it('returns the string version of any number', () => {
-    assert.deepEqual(readNumber(200), 'two-hundred')
+    assert.deepEqual(readNumber(200), 'two hundred ')
     assert.deepEqual(readNumber(2), 'two')
-    assert.deepEqual(readNumber(4.652), 'four point six fifty-two')
-    assert.deepEqual(readNumber(0.04), 'zero point zero four')
+    assert.deepEqual(readNumber(2357), 'two thousand, three hundred fifty-seven')
+    assert.deepEqual(readNumber(3212), 'three thousand, two hundred twelve')
+    assert.deepEqual(readNumber(54321), 'fifty-four thousand, three hundred twenty-one')
   })
 
 });
