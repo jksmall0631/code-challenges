@@ -28,6 +28,9 @@ describe('tests', function() {
     assert.deepEqual(readNumber(2357), 'two thousand, three hundred fifty-seven')
     assert.deepEqual(readNumber(3212), 'three thousand, two hundred twelve')
     assert.deepEqual(readNumber(54321), 'fifty-four thousand, three hundred twenty-one')
+    assert.deepEqual(readNumber(5.231), 'five and two hundred thirty-one thousandths')
+    assert.deepEqual(readNumber(5.2), 'five and two tenths')
+    assert.deepEqual(readNumber(5.23), 'five and twenty-three hundredths')
   })
 
 });
