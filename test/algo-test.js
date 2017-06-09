@@ -21,6 +21,7 @@ describe('tests', function() {
     assert.deepEqual(highAndLow('4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'), '542 -214')
     assert.deepEqual(highAndLow('6500 -72 -87 5609 789 34 -723'), '6500 -723')
     assert.deepEqual(highAndLow('0.43 0.432 0 0.53'), '0.53 0')
+    assert.deepEqual(highAndLow('-0.43 0.432 0 -0.53'), '0.432 -0.53')
   })
 
   it('returns the string version of any number', () => {
