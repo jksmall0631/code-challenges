@@ -42,4 +42,11 @@ describe('tests', function() {
     assert.deepEqual(isPalindrome(1002), false)
   })
 
+  it('returns true if the input word is a palindrome', () => {
+    assert.deepEqual(isPalindromeDos('dood'), true)
+    assert.deepEqual(isPalindromeDos('true'), false)
+    assert.deepEqual(isPalindromeDos(1001), true)
+    assert.deepEqual(isPalindromeDos(1002), false)
+  })
+
 });
