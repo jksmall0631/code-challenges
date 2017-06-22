@@ -1,6 +1,6 @@
 
 const assert = require('chai').assert;
-const { time, highAndLow, readNumber, isPalindrome, isPalindromeDos } = require('../lib/algo.js');
+const { time, highAndLow, bubbleSort, readNumber, isPalindrome, isPalindromeDos } = require('../lib/algo.js');
 
 describe('tests', function() {
 
@@ -22,6 +22,11 @@ describe('tests', function() {
     assert.deepEqual(highAndLow('6500 -72 -87 5609 789 34 -723'), '6500 -723')
     assert.deepEqual(highAndLow('0.43 0.432 0 0.53'), '0.53 0')
     assert.deepEqual(highAndLow('-0.43 0.432 0 -0.53'), '0.432 -0.53')
+  })
+
+  it('sorts an array of numbers', () => {
+    assert.deepEqual(bubbleSort([5, 89, 4, 34, 2]), [2, 4, 5, 34, 89])
+    assert.deepEqual(bubbleSort([1, 2, 3, 4, 5]), [1, 2, 3, 4, 5])
   })
 
   it('returns the string version of any number', () => {
