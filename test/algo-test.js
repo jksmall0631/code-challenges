@@ -1,6 +1,6 @@
 
 const assert = require('chai').assert;
-const { time, highAndLow, readNumber } = require('../lib/algo.js');
+const { time, highAndLow, readNumber, isPalindrome, isPalindromeDos } = require('../lib/algo.js');
 
 describe('tests', function() {
 
@@ -33,6 +33,13 @@ describe('tests', function() {
     assert.deepEqual(readNumber(5.231), 'five and two hundred thirty-one thousandths')
     assert.deepEqual(readNumber(5.2), 'five and two tenths')
     assert.deepEqual(readNumber(5.23), 'five and twenty-three hundredths')
+  })
+
+  it('returns true if the input word is a palindrome', () => {
+    assert.deepEqual(isPalindrome('dood'), true)
+    assert.deepEqual(isPalindrome('true'), false)
+    assert.deepEqual(isPalindrome(1001), true)
+    assert.deepEqual(isPalindrome(1002), false)
   })
 
 });
