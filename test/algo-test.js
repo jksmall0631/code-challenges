@@ -1,6 +1,6 @@
 
 const assert = require('chai').assert;
-const { time, highAndLow, highAndLowDos, bubbleSort, readNumber, isPalindrome, isPalindromeDos } = require('../lib/algo.js');
+const { time, highAndLow, highAndLowDos, bubbleSort, readNumber, isPalindrome, isPalindromeDos, filterLucky } = require('../lib/algo.js');
 
 describe('tests', function() {
 
@@ -62,6 +62,11 @@ describe('tests', function() {
     assert.deepEqual(isPalindromeDos(1001), true)
     assert.deepEqual(isPalindromeDos(1002), false)
     assert.deepEqual(isPalindromeDos('!!'), true)
+  })
+
+  it('returns an array of numbers that include the lucky number', () => {
+    assert.deepEqual(filterLucky([94, 82, 5, 93, 74, 03]), [74])
+    assert.deepEqual(filterLucky([92387, 6262626, 058, 0.87, 0.93, 90]), [92387, 0.87])
   })
 
 });
